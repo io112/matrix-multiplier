@@ -1,0 +1,19 @@
+name: rctask-matrix-multiplexer
+url: rctask-matrix-multiplexer
+team: 63ff6badca90ca0dcf432198
+mode: risingcloud
+workspace: Sandbox
+from: ubuntu:22.04
+build: []
+daemons: []
+timeout: 300000
+env: {}
+minWorkers: 0
+maxWorkers: 8
+maxStorage: 4000
+deps:
+- apt-get update
+- apt-get -y upgrade
+- apt-get install -y python3 python3-pip
+- python3 -m pip install -r requirements.txt
+run: python3 main.py
